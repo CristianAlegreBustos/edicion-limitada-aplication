@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import StyledJsxRegistry from "./registry";
+import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Footer } from "@/components/home/footer/footer";
+import { Header } from "@/components/home/header/header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,9 +31,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      ><StyledJsxRegistry><GluestackUIProvider mode="light">
+           <Header />
+            {children}
+            <Footer/>
+          </GluestackUIProvider></StyledJsxRegistry></body>
     </html>
   );
 }
