@@ -6,7 +6,7 @@ import { Link, LinkText } from '@/components/ui/link';
 
 export const Header: React.FC = () => {
 
-  const navBarItem =[{title:'Inicio',link:''},{title:'Coleccion',link:'/collections'},{title:'Guia de talles',link:'/size-guides'},{title:'Sobre Nosotros', link:'/about'}]
+  const navBarItem =[{title:'Inicio',link:'/'},{title:'Coleccion',link:'/collections'},{title:'Guia de talles',link:'/size-guides'},{title:'Sobre Nosotros', link:'/about'}]
   return (
     <Box className="bg-black p-4 flex flex-row justify-between items-center border-b border-gold">
       <Menu className="w-6 h-6 text-gold md:hidden" />
